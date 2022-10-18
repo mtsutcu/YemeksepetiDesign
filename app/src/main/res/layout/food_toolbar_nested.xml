@@ -1,0 +1,67 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_food"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+
+
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_scrollFlags="snap|scroll|enterAlways">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/myGreySearch"
+
+
+                android:text="Yemek, mutfak veya restoran arayın"
+                android:textAllCaps="false"
+                android:textColor="@color/myGrey"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/search_icon"
+
+                app:iconTint="@color/myGrey" />
+
+            <ImageView
+                android:id="@+id/imageViewFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/segment_icon" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/includeNestedFood"
+        layout="@layout/nested_food" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,53 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+
+            app:layout_scrollFlags="snap|scroll|enterAlways">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/search_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="@color/white"
+
+                android:text="Restoran veya mağaza arayın"
+                android:textAllCaps="false"
+                android:textColor="@color/myTextColor"
+                android:textSize="12sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/search_icon"
+                app:iconTint="@color/myGrey" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/includeNested"
+        layout="@layout/nested" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
